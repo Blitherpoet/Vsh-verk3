@@ -1,0 +1,169 @@
+body{
+	max-width: 60em;
+	margin: auto;
+}
+*{
+	font-family: arial;
+}
+header,article,footer,aside{
+	padding: 20px;
+}
+header{
+	background-color: fuchsia;
+	font-size: 1.4em;
+	text-align: center;
+}
+section{
+	display: flex;
+	flex-flow: column;
+}
+article{
+	flex:2;
+	background-color: cyan;
+}
+aside{
+	flex:1;
+	background-color: gold;
+}
+footer{
+	background-color: lime;
+	margin-bottom: 2em;
+}
+label{
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	left: 0;
+	right: 0;
+	background-color: fuchsia;
+	padding: 10px;
+	font-size: 1.3em;
+	z-index: 999;
+}
+input{
+	display: none;
+}
+input[type=checkbox]:checked ~ .menu {
+	display: block;
+	position: fixed;
+	bottom: 1.8em;
+	transition: all 0.4s ease;
+}
+.menu{
+	position: fixed;
+	bottom: -10em;
+	z-index: 990;
+	padding: 0;
+	width: 100%;
+	transition: all 0.4s ease;
+}
+.menu li{
+	background-color: fuchsia;
+	padding: 10px;
+	margin:0; 
+	text-align: center;
+}
+.menu a{
+	color: white;
+	text-decoration: none;
+}
+.box{
+	display: flex;
+	flex-flow: row;
+}
+.box a{
+	text-decoration: none;
+	color: white;
+}
+.a,.b,.c,.d{
+	height: 3em;
+	width: 3em;
+	line-height: 3em;
+	text-align: center;
+}
+.a{
+	background-color: darkorange;
+}
+.b{
+	background-color: fuchsia;
+}
+.c{
+	background-color: green;
+}
+.d{
+	background-color: darkblue;
+}
+.myndir img{
+	width: 100%;
+	float: left;
+}
+@media screen and (min-width:30em) and (max-width: 48em){
+	section{
+		display: block;
+	}
+	aside{
+		width: 50%;
+		box-sizing: border-box;
+		float: left;
+	}
+	.myndir img{
+		width: 50%;
+		float: left;
+	}
+}
+@media screen and (min-width:48em){
+	.menu{
+		position: relative;
+		width: 100%;
+		top: 0;
+		background-color: fuchsia;
+		margin: 0;
+		text-align: center;
+		padding: 0;
+	}
+	label{
+		display: none;
+	}
+	.menu li{
+		display: inline-block;
+		background-color: deeppink;
+		bottom: none;
+		padding: 10px;
+		margin:0;
+		bottom: 0;
+		text-align: center;
+	}
+	.menu a{
+		color: white;
+		text-decoration: none;
+	}
+	.menu a :hover{
+		background-color: darkred;
+	}
+	section{
+		display: flex;
+		flex-flow: row;
+	}
+	.aside1{
+		order: 1;
+	}
+	.aside2{
+		order: 3;
+	}
+	article{
+		order: 2;
+	}
+	.myndir img{
+		width: 25%;
+		float: left;
+		padding-bottom:10px; 
+	}
+}
+@media screen and (min-width: 64em){
+	.box{
+		position: fixed;
+		top: 3em;
+		flex-flow: column;
+		left: 0;
+	}
+}
